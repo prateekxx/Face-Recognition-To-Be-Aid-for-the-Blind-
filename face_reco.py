@@ -35,9 +35,9 @@ def giveInfo(name):
             now = datetime.now()
             dtString = now.strftime('%H:%M:%S')
             f.write(f'\n{name},{dtString}')
-            myTexr = (name)
+            myText = (name)
             language = 'en'
-            output = gTTS(text=myTexr, lang=language, slow=False)
+            output = gTTS(text=myText, lang=language, slow=False)
             output.save("output.mp3")
             os.system("start output.mp3")
 
@@ -74,9 +74,9 @@ while True:
             cv2.rectangle(img,(x1,y2-35),(x2,y2),(255,0,0),cv2.FILLED)
             cv2.putText(img,name,(x1+6,y2-2),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
             giveInfo(name)
-            # myTexr = name
+            # myText = name
             # language = 'en'
-            # output = gTTS(text=myTexr, lang=language, slow=False)
+            # output = gTTS(text=myText, lang=language, slow=False)
             # output.save("output.mp3")
             
             # os.system("start output.mp3")
